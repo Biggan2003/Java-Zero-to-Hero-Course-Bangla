@@ -11,4 +11,5 @@
            Price: 25.50 Euros, 
            Availability: true
  * Step 5: Print all the data with proper labels
+ 
  */
