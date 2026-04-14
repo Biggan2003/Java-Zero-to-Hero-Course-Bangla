@@ -247,6 +247,7 @@ int sum = a + b + 3;
 | 5   | Unary         | একক ভেরিয়েবলের কাজ |
 | 6   | Ternary       | শর্টকাট if-else    |
 
+<img width="1488" height="718" alt="op" src="https://github.com/user-attachments/assets/a1ce6218-f811-4296-8839-8971468132f0" />
 
 
 ##  1. Arithmetic Operators (গাণিতিক অপারেটর)
