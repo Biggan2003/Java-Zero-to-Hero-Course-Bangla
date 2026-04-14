@@ -321,5 +321,60 @@ Using print(): Sum = 15 Product = 50
 Using printf(): Sum = 15, Product = 50, Remainder = 0
 ```
 
+------------------
+
+## 2. Assignment Operator কী? (What is Assignment Operator?)
+
+Assignment Operator মানে হলো **ভেরিয়েবলের মধ্যে মান বসানোর জন্য ব্যবহৃত অপারেটর**।
+```java
+int a = 10;
+// এখানে:
+// '=' = Assignment Operator
+// 'a' = Variable
+// '10' = Value (Constant)
+```
+
+**সহজ ভাষায়:** `=` চিহ্নের ডানপাশের জিনিসটা বামপাশের ভেরিয়েবলের মধ্যে রেখে দেয়।
+## Assignment Operators-এর প্রকারভেদ
+
+| Operator  চিহ্ন | Operator নাম         | উদাহরণ    | Same As      |
+| --------------- | -------------------- | --------- | ------------ |
+| `=`             | Assign               | `x = 10`  | x এ 10 বসাও  |
+| `+=`            | Add & Assign         | `x += 5`  | `x = x + 5`  |
+| `-=`            | Subtract & Assign    | `x -= 5`  | `x = x - 5`  |
+| `*=`            | Multiply & Assign    | `x *= 5`  | `x = x * 5`  |
+| `/=`            | Divide & Assign      | `x /= 5`  | `x = x / 5`  |
+| `%=`            | Modulus & Assign     | `x %= 5`  | `x = x % 5`  |
+| `\|=`           | OR & Assign          | `x \|= 3` | `x = x \| 3` |
+| `^=`            | XOR & Assign         | `x ^= 3`  | `x = x ^ 3`  |
+| `>>=`           | Right Shift & Assign | `x >>= 3` | `x = x >> 3` |
+| `<<=`           | Left Shift & Assign  | `x <<= 3` | `x = x << 3` |
+
+#### সম্পূর্ণ উদাহরণ (User Input + Assignment Operators)
+```java
+import java.util.Scanner;
+
+public class AssignmentOperatorsDemo {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Enter a number: ");
+        int x = input.nextInt();
+        System.out.println("Original value: " + x);
+        x += 5;     // x = x + 5
+        System.out.println("After += 5: " + x);
+        x -= 3;     // x = x - 3
+        System.out.println("After -= 3: " + x);
+        x *= 2;     // x = x * 2
+        System.out.println("After *= 2: " + x);
+        x /= 4;     // x = x / 4
+        System.out.println("After /= 4: " + x);
+        x %= 3;     // x = x % 3
+        System.out.println("After %= 3: " + x);
+        
+        input.close();
+    }
+}
+```
 
 
