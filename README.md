@@ -208,5 +208,118 @@ String name = input.nextLine(); // ✅ এখন ঠিকমতো কাজ �
 2. Take two integers from user and print their sum
 3. Take a double number from user and print its square
 
+---------
+------------
+-------------
+
+### 🎯 Topic: Operators in Java
+
+## Operator কী? (What is an Operator?)
+
+Operator হলো **বিশেষ চিহ্ন বা শব্দ** যা ভেরিয়েবল বা ভ্যালুর উপর নির্দিষ্ট অপারেশন করে।
+**সহজ ভাষায়:**  
+Operator হলো গণিতের মতো — যেমন `+` মানে যোগ, `-` মানে বিয়োগ।
+```java
+int a = 10;
+int b = 5;
+int sum = a + b + 3;
+
+// এখানে:
+// '+' = Operator
+// '=' = Operator
+// 'a' আর 'b' = Operands
+// '10' আর '5' আর  3 = Constant
+// 'a', 'b', 'sum' = Variable
+// 'sum = a + b' = Expression
+// 'int sum = a + b;' = Statement
+// ';' = Statement Terminator
+```
+## Java Operators-এর প্রকারভেদ : 
+<img width="1365" height="768" alt="aaa" src="https://github.com/user-attachments/assets/5a9456c6-d83d-4288-a7eb-5a378eaf388a" />
+
+
+| #   | Operator Type | কাজ                |
+| --- | ------------- | ------------------ |
+| 1   | Arithmetic    | গাণিতিক হিসাব      |
+| 2   | Assignment    | মান বসানো          |
+| 3   | Relational    | তুলনা করা          |
+| 4   | Logical       | শর্ত যাচাই         |
+| 5   | Unary         | একক ভেরিয়েবলের কাজ |
+| 6   | Ternary       | শর্টকাট if-else    |
+
+
+
+##  1. Arithmetic Operators (গাণিতিক অপারেটর)
+**কাজ:** সংখ্যা নিয়ে সাধারণ গণিত করা।
+
+| Operator  চিহ্ন | Operator নাম   | উদাহরণ               | ফলাফল           |     |
+| --------------- | -------------- | -------------------- | --------------- | --- |
+| +               | Addition       | `sum = 10 + 5`       | `sum = 15`      |     |
+| -               | Subtraction    | `diff = 10 - 5`      | `diff = 5`      |     |
+| *               | Multiplication | `product = 10 * 5`   | `product = 50`  |     |
+| /               | Division       | `quotient = 10 / 5`  | `quotient = 2`  |     |
+| %               | Modulus        | `remainder = 10 % 5` | `remainder = 0` |     |
+
+Example:
+```java
+import java.util.Scanner;
+
+public class ArithmeticOperations {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        // ইউজারের কাছ থেকে দুটি সংখ্যা নেওয়া
+        System.out.print("Enter first number: ");
+        int a = input.nextInt();
+        
+        System.out.print("Enter second number: ");
+        int b = input.nextInt();
+        
+        // Arithmetic Operations
+        int sum = a + b;        // sum = a + b
+        int diff = a - b;       // diff = a - b
+        int product = a * b;    // product = a * b
+        int quotient = a / b;   // quotient = a / b
+        int remainder = a % b;  // remainder = a % b
+        
+        // Print Methods দিয়ে আউটপুট দেখানো
+        System.out.println("\n===== Results =====");
+        
+        // Method 1: println() - প্রতিটি লাইনে প্রিন্ট করে
+        System.out.println("Sum: " + sum);
+        System.out.println("Difference: " + diff);
+        System.out.println("Product: " + product);
+        System.out.println("Quotient: " + quotient);
+        System.out.println("Remainder: " + remainder);
+        
+        // Method 2: print() - একই লাইনে প্রিন্ট করে
+        System.out.print("\nUsing print(): ");
+        System.out.print("Sum = " + sum + " ");
+        System.out.print("Product = " + product);
+        
+        // Method 3: printf() - ফরম্যাট করে প্রিন্ট করে
+        System.out.printf("\n\nUsing printf(): Sum = %d, Product = %d, Remainder = %d\n", sum, product, remainder);
+        
+        input.close();
+    }
+}
+```
+**নমুনা আউটপুট:**
+```text
+Enter first number: 10
+Enter second number: 5
+
+===== Results =====
+Sum: 15
+Difference: 5
+Product: 50
+Quotient: 2
+Remainder: 0
+
+Using print(): Sum = 15 Product = 50
+
+Using printf(): Sum = 15, Product = 50, Remainder = 0
+```
+
 
 
