@@ -132,8 +132,60 @@ int age = input.nextInt();
 System.out.print("Enter name: ");
 String name = input.nextLine(); // ❌ This gets skipped!
 ```
-**Why?**  
-`nextInt()` leaves a newline character `\n` in buffer. `nextLine()` reads that `\n` immediately.
+
+### সমস্যাটি কী? (What is the Problem?)
+
+##### আপনি যখন `nextInt()`-এর পর `nextLine()` ব্যবহার করেন, তখন **`nextLine()` কাজই করে না** — সেটা স্কিপ হয়ে যায়। মানে প্রোগ্রাম আপনার কাছ থেকে দ্বিতীয় ইনপুট নেওয়ার সুযোগই দেয় না।
+---
+## 🧪 লাইভ উদাহরণ (Live Example)
+```java
+System.out.print("Enter your age: ");
+int age = input.nextInt();
+
+System.out.print("Enter your name: ");
+String name = input.nextLine();
+
+System.out.println("Age: " + age);
+System.out.println("Name: " + name);
+```
+
+**আপনি যা দেখবেন:**
+```text
+Enter your age: 25
+Enter your name: Age: 25
+Name: 
+```
+👉 **দেখুন সমস্যাটি:**
+- "Enter your name:" লেখার পরই সাথে সাথেই আউটপুট চলে এসেছে
+- আপনি নাম লেখার কোনো সুযোগই পেলেন না
+- `name` ভেরিয়েবলে কিছুই রাখা হয়নি (empty string)
+
+## 🧠 কেন হয়? (Why Does This Happen?)
+এর পেছনে আছে **Buffer** নামক একটি জিনিস।
+
+### Solution: 
+### `nextLine()` বসানো
+```java
+System.out.print("Enter age: ");
+int age = input.nextInt();
+
+input.nextLine(); // 👈 এই লাইনটি বসান! (এটি \n খেয়ে ফেলবে)
+
+System.out.print("Enter name: ");
+String name = input.nextLine(); // ✅ এখন ঠিকমতো কাজ করবে
+```
+
+## 📋 দ্রুত মনে রাখার টেবিল (Quick Memory Table)
+
+| আগে যা ব্যবহার করেন | পরে যা ব্যবহার করেন | করণীয়                      |
+| ------------------- | ------------------- | --------------------------- |
+| `nextInt()`         | `nextLine()`        | মাঝে `input.nextLine()` দিন |
+| `nextDouble()`      | `nextLine()`        | মাঝে `input.nextLine()` দিন |
+| `next()`            | `nextLine()`        | মাঝে `input.nextLine()` দিন |
+| `nextFloat()`       | `nextLine()`        | মাঝে `input.nextLine()` দিন |
+| `nextLong()`        | `nextLine()`        | মাঝে `input.nextLine()` দিন |
+| `nextLine()`        | `nextLine()`        | ❌ কোনো সমস্যা নেই           |
+
 
 ### 6. Quick Reference Table
 
