@@ -186,6 +186,9 @@ String name = input.nextLine(); // ✅ এখন ঠিকমতো কাজ �
 | `nextLong()`        | `nextLine()`        | মাঝে `input.nextLine()` দিন |
 | `nextLine()`        | `nextLine()`        | ❌ কোনো সমস্যা নেই           |
 
+-----
+--------
+
 
 ### 6. Quick Reference Table
 
