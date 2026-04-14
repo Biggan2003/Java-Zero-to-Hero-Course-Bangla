@@ -235,7 +235,6 @@ int sum = a + b + 3;
 // ';' = Statement Terminator
 ```
 ## Java Operators-এর প্রকারভেদ : 
-<img width="1365" height="768" alt="aaa" src="https://github.com/user-attachments/assets/5a9456c6-d83d-4288-a7eb-5a378eaf388a" />
 
 
 | #   | Operator Type | কাজ                |
