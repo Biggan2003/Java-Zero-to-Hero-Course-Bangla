@@ -1,5 +1,5 @@
 /*
- * Assignment: Student Bio-Data Form
+ * Assignment_3: Student Bio-Data Form
  * 
  * Step 1: Create a class called StudentBio
  * Step 2: Create a main method
